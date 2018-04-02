@@ -1,0 +1,7 @@
+package livraria.core.apicacao;
+
+import livraria.dominio.IEntidade;
+
+public class EntidadeAplicacao implements IEntidade {
+	
+}

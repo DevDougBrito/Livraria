@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="les12015-web">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="les12015-dominio.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/les12015-dominio/les12015-dominio">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="les12015-core.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/les12015-core/les12015-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="postgresql-9.2-1002.jdbc4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/rodrigo/Programas/Java/postgresql-9.2-1002.jdbc4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="les12015-web"/>
+        <property name="java-output-path" value="/les12015-web/build/classes"/>
+    </wb-module>
+</project-modules>

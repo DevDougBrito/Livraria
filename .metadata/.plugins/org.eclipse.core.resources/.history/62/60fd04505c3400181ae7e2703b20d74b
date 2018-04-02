@@ -1,0 +1,5 @@
+package livraria.controle.web.command;
+
+public interface ICommand {
+
+}

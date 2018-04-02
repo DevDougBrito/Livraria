@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="livraria.core22">
+        <dependent-module archiveName="mysql-connector-java-5.1.44-bin.jar" deploy-path="/" handle="module:/classpath/lib/C:/Users/Douglas/Desktop/LES/mysql-connector-java-5.1.44-bin.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/livraria.core22/build/classes"/>
+    </wb-module>
+</project-modules>

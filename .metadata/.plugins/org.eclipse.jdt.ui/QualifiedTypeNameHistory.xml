@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="livraria.dominio.GrupoPrecificacao"/>
+<fullyQualifiedTypeName name="livraria.core.IFachada"/>
+<fullyQualifiedTypeName name="livraria.core.IDAO"/>
+<fullyQualifiedTypeName name="livraria.core.IStrategy"/>
+<fullyQualifiedTypeName name="livraria.core.aplicacao.Resultado"/>
+<fullyQualifiedTypeName name="livraria.core.impl.dao.LivroDAO"/>
+<fullyQualifiedTypeName name="livraria.dominio.Livro"/>
+<fullyQualifiedTypeName name="livraria.dominio.EntidadeDominio"/>
+</qualifiedTypeNameHistroy>

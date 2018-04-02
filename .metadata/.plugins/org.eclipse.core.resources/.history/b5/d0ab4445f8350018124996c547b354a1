@@ -1,0 +1,10 @@
+package livraria.dominio;
+
+import java.util.Date;
+
+public class Condicao extends EntidadeDominio {
+	private String descricao, estado;
+	private int idModificador;
+	private Date dataModificacao;
+	private CategoriaEstado categoria;
+}

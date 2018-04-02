@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/action_page.php">
+		<pr>Inforamações do Livro</pr><br>
+		Titulo: <input type="text" name="FirstName" value="Senhor dos Aneis"><br>
+		autor: 	<select>
+				  <option value="volvo">Machado de Assis</option>
+				  <option value="saab">Tolkien</option>
+				  <option value="opel">Paulo Coelho</option>
+				</select>
+				<br>
+				<br>
+				<br>
+		ano: <input type="text" name="LastName" value="1915"><br>
+		edicao: <input type="text" name="LastName" value="2"><br>
+		editora:<select>
+				  <option value="volvo">Arqueiro</option>
+				  <option value="saab">Abril</option>
+				  <option value="opel">Novo Mundo</option>
+				</select>
+				<br>
+				<br>
+				<br>
+		número de páginas: <input type="text" name="LastName" value="800"><br>
+		Sinópse: <input type="text" name="LastName" value="Era uma vez um cabra muito macho q fez um anel e tal"><br>
+		<pr>Inforamações Técnicas do Livro</pr><br>
+		ISBN: <input type="text" name="LastName" value="121212"><br>
+		altura: <input type="text" name="LastName" value="25"><br>
+		largura: <input type="text" name="LastName" value="18"><br>
+		profundidade: <input type="text" name="LastName" value="8"><br>
+		peso: <input type="text" name="LastName" value="1.2"><br>
+		categoria: <select>
+					  <option value="volvo">A - 30 %</option>
+					  <option value="saab">B - 35 %</option>
+					  <option value="opel">C - 40 %</option>
+					</select>
+					<br>
+					<br>
+					<br>	
+		<input type="submit" value="Salvar">
+	</form>
+</body>
+</html>

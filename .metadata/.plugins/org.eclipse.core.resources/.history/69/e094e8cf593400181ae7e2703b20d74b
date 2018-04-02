@@ -1,0 +1,5 @@
+package livraria.web.controle.vh;
+
+public class IViewHelper {
+
+}
