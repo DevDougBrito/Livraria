@@ -16,6 +16,7 @@ import livraria.controle.web.command.impl.ExcluirCommand;
 import livraria.controle.web.command.impl.SalvarCommand;
 import livraria.controle.web.command.impl.VisualizarCommand;
 import livraria.controle.web.vh.IViewHelper;
+import livraria.controle.web.vh.impl.ClienteViewHelper;
 import livraria.controle.web.vh.impl.LivroViewHelper;
 import livraria.core.aplicacao.Resultado;
 import livraria.dominio.EntidadeDominio;
@@ -54,6 +55,7 @@ public class Servlet extends HttpServlet {
     	 * está configurado no web.xml e sendo utilizada no action do html
     	 */
     	vhs.put("/livraria.web/SalvarLivro", new LivroViewHelper());
+    	vhs.put("/livraria.web/SalvarCliente", new ClienteViewHelper());
 
     	
     }
@@ -70,6 +72,7 @@ public class Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,
     		IOException {
+    	
     	doProcessRequest(request, response);
     }
 
@@ -84,7 +87,7 @@ public class Servlet extends HttpServlet {
 	
 	protected void doProcessRequest(HttpServletRequest request, 
 			HttpServletResponse response) throws ServletException, IOException {
-	
+		
 		//Obtêm a uri que invocou esta servlet (O que foi definido no methdo do form html)
 		String uri = request.getRequestURI();
 		

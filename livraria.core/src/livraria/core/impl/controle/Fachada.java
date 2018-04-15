@@ -8,7 +8,9 @@ import java.util.Map;
 
 import livraria.core.*;
 import livraria.core.aplicacao.*;
+import livraria.core.impl.dao.ClienteDAO;
 import livraria.core.impl.dao.LivroDAO;
+import livraria.dominio.Cliente;
 import livraria.dominio.EntidadeDominio;
 import livraria.dominio.Livro;
 
@@ -39,9 +41,11 @@ public class Fachada implements IFachada {
 		/* Criando instâncias dos DAOs a serem utilizados*/
 
 		LivroDAO livroDAO = new LivroDAO();
+		ClienteDAO clienteDAO = new ClienteDAO();
 		
 		/* Adicionando cada dao no MAP indexando pelo nome da classe */	
 		daos.put(Livro.class.getName(), livroDAO);
+		daos.put(Cliente.class.getName(), clienteDAO);
 		
 		
 		/* Criando instâncias de regras de negócio a serem utilizados		

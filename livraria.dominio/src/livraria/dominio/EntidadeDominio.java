@@ -1,8 +1,6 @@
 package livraria.dominio;
 
-import java.util.Date;
-
-public class EntidadeDominio {
+public abstract class EntidadeDominio {
 	private Integer id;
 
 	public Integer getId() {

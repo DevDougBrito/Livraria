@@ -27,11 +27,34 @@ public class LivroDAO extends AbstractJdbcDAO {
 		try {
 			connection.setAutoCommit(false);						
 			StringBuilder sql = new StringBuilder();
+			sql.append("INSERT INTO dimensoes(");
+			sql.append("altura , largura , profundidade , peso) ");
+			sql.append( "VALUES (?,?,?,?)");		
+			
+			pst = connection.prepareStatement(sql.toString(), 
+					Statement.RETURN_GENERATED_KEYS);
+
+
+			pst.setDouble(1, livro.getDimensoes().getAltura());
+			pst.setDouble(2, livro.getDimensoes().getLargura());
+			pst.setDouble(3, livro.getDimensoes().getProfundidade());
+			pst.setDouble(4, livro.getDimensoes().getPeso());
+
+			pst.executeUpdate();	
+			
+			ResultSet rs_dim = pst.getGeneratedKeys();
+			int id_dim=0;
+			if(rs_dim.next())
+				id_dim = rs_dim.getInt(1);
+			livro.getDimensoes().setId(id_dim);			
+			connection.commit();
+									
+			sql = new StringBuilder();
 			
 			sql.append("INSERT INTO livro(");
 			sql.append("data_criacao , status , ano , titulo , edicao , ISBN , ");
 			sql.append("numPag , sinopse , autor_id , editora_id , dimensoes_id ,");
-			sql.append( "grupo_prec_id, custo) VALUES (sysdate(),true,?,?,?,?,?,?,?,?,?,?,?)");		
+			sql.append( "grupo_prec_id) VALUES (sysdate(),true,?,?,?,?,?,?,?,?,?,?)");		
 			
 			pst = connection.prepareStatement(sql.toString(), 
 					Statement.RETURN_GENERATED_KEYS);
@@ -46,7 +69,7 @@ public class LivroDAO extends AbstractJdbcDAO {
 			pst.setInt(8, livro.getEditora().getId());
 			pst.setInt(9, livro.getDimensoes().getId());
 			pst.setInt(10, livro.getGrupoPrecificacao().getId());
-			pst.setDouble(11, livro.getCusto());
+//			pst.setDouble(11, livro.getCusto());
 			pst.executeUpdate();	
 			
 			ResultSet rs = pst.getGeneratedKeys();
